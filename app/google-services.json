@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "566961453391",
+    "project_id": "login-signup-frd-c40cf",
+    "storage_bucket": "login-signup-frd-c40cf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:566961453391:android:a875968ba9251c6362ed3a",
+        "android_client_info": {
+          "package_name": "com.sifat.loginsignupfrd"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApu_k3zrTpY9yd3vyTbY4sNXYDSMvsl7M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
