@@ -27,7 +27,7 @@ class SignupActivity : AppCompatActivity() {
         databaseReference = firebaseDatbase.reference.child("users")
 
         binding.signup.setOnClickListener {
-            val user = binding.username.text.toString()
+            val user = binding.email.text.toString()
             val password = binding.password.text.toString()
 
             if (user.isNotEmpty()&& password.isNotEmpty()){

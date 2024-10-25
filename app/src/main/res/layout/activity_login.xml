@@ -28,7 +28,7 @@
         android:layout_marginHorizontal="50dp"
         android:layout_marginBottom="20dp"
         android:autofillHints="emailAddress"
-        android:hint="Email Address"
+        android:hint="username"
         android:inputType="textEmailAddress"
         android:paddingHorizontal="10dp"
         android:paddingVertical="5dp"
