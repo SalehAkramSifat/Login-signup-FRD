@@ -35,10 +35,8 @@ class SignupActivity : AppCompatActivity() {
             }
             else{
                 Toast.makeText(this@SignupActivity, "all field are mabdatory", Toast.LENGTH_SHORT).show()
-
             }
         }
-
     }
     private fun signupUser(username: String, password:String){
         databaseReference.orderByChild("username").equalTo(username).addListenerForSingleValueEvent(object :
