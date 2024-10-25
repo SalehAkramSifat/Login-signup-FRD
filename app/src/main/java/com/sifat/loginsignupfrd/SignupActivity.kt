@@ -50,7 +50,7 @@ class SignupActivity : AppCompatActivity() {
                     databaseReference.child(id!!).setValue(userData)
                     Toast.makeText(this@SignupActivity, "Signup succesfull", Toast.LENGTH_SHORT).show()
 
-                    startActivity(Intent(this@SignupActivity, MainActivity::class.java))
+                    startActivity(Intent(this@SignupActivity, LoginActivity::class.java))
                     finish()
                 }else{
                     Toast.makeText(this@SignupActivity, "Already Exists", Toast.LENGTH_SHORT).show()
