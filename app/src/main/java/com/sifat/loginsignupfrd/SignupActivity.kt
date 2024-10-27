@@ -45,7 +45,6 @@ class SignupActivity : AppCompatActivity() {
             }
         }
     }
-
     private fun signupUser(email: String, hashedPassword: String) {
         // Show progress bar
         binding.progressBar.visibility = View.VISIBLE
