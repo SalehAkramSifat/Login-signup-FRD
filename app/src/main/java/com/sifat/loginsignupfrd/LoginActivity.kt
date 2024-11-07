@@ -53,38 +53,24 @@ class LoginActivity : AppCompatActivity() {
         databaseReference.orderByChild("username").equalTo(username)
             .addListenerForSingleValueEvent(object : ValueEventListener {
                 override fun onDataChange(dataSnapshot: DataSnapshot) {
-                    progressBar.visibility = View.GONE // Hide progress bar after fetching data
+                    progressBar.visibility = View.GONE 
                     if (dataSnapshot.exists()) {
                         for (userSnapshot in dataSnapshot.children) {
                             val userData = userSnapshot.getValue(UserData::class.java)
                             if (userData != null) {
                                 if (userData.password == password) {
-                                    Toast.makeText(
-                                        this@LoginActivity,
-                                        "Login Successful",
-                                        Toast.LENGTH_SHORT
-                                    ).show()
-                                    startActivity(
-                                        Intent(
-                                            this@LoginActivity,
-                                            MainActivity::class.java
-                                        )
-                                    )
+                                    Toast.makeText(this@LoginActivity,"Login Successful",Toast.LENGTH_SHORT).show()
+                                    startActivity(Intent(this@LoginActivity,MainActivity::class.java))
                                     finish()
-                                    return // Exit the loop and function after a successful login
+                                    return 
                                 } else {
-                                    Toast.makeText(
-                                        this@LoginActivity,
-                                        "Incorrect password",
-                                        Toast.LENGTH_SHORT
-                                    ).show()
+                                    Toast.makeText(this@LoginActivity,"Incorrect password",Toast.LENGTH_SHORT).show()
                                     return
                                 }
                             }
                         }
                     } else {
-                        Toast.makeText(this@LoginActivity, "User not found", Toast.LENGTH_SHORT)
-                            .show()
+                        Toast.makeText(this@LoginActivity, "User not found", Toast.LENGTH_SHORT).show()
                     }
                 }
 
