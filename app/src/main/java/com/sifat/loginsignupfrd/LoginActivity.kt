@@ -76,11 +76,7 @@ class LoginActivity : AppCompatActivity() {
 
                 override fun onCancelled(databaserror: DatabaseError) {
                     progressBar.visibility = View.GONE // Hide progress bar on error
-                    Toast.makeText(
-                        this@LoginActivity,
-                        "Database Error: ${databaserror.message}",
-                        Toast.LENGTH_SHORT
-                    ).show()
+                    Toast.makeText(this@LoginActivity,"Database Error: ${databaserror.message}",Toast.LENGTH_SHORT).show()
                 }
             })
     }
